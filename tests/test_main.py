@@ -28,6 +28,3 @@ def test_nearest_neighbour():
     
     for (point, answer) in zip(test_points, test_answers):
         assert find_nearest_neighbour_from_point(point_cloud, point)==answer
-
-def test_simple_math():
-    assert 2+2==4
