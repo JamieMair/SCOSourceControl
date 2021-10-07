@@ -1,8 +1,6 @@
 import numpy as np
 
-""" 
 
-"""
 def generate_point_cloud(n:int, d:int = 2, seed=1234) -> np.ndarray:
     """Generates an array of d dimensional points in the range of [0, 1). The function generates n points. The result is stored in a n x d numpy array. 
 
