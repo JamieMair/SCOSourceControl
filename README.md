@@ -7,6 +7,12 @@ The idea of this task is to practise using Git and test driven development. The 
 
 You should only need to modify `main.py`, and you do not need to change any of the tests.
 
+**Note:** In order to have the tests badge to run correctly you have to change the link in this markdown file to: `https://github.com/UoNPhysics/REPOSITORYNAME/actions/workflows/python-app.yml/badge.svg`, making sure to replace `REPOSITORYNAME` with the name of your own repository. To edit, click the pencil icon where the markdown file is displayed. You will end up with something at the top of your README.md file like this:
+```
+![Tests](https://github.com/UoNPhysics/sourcecontrol-JamieMair/actions/workflows/python-app.yml/badge.svg)
+```
+
+
 # Tasks
 
 1. Download the repository to your local machine using Github Desktop or another Git client.
