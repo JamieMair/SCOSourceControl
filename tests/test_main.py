@@ -41,7 +41,7 @@ def test_all_nearest_neighbours():
         nearest_neighbour_idx = find_nearest_neighbour_from_point(point_cloud, i)
         assert nearest_neighbour_idx == nearest_neighbour_indices[i], f"Failed on the index {i}. Actual: {nearest_neighbour_idx}, Calculated: {nearest_neighbour_indices[i]}"
 
-
+""" Uncomment this code for the speed test.
 def test_all_nearest_neighbours_speed():
     n = 8096
     repeats = 3
@@ -60,3 +60,4 @@ def test_all_nearest_neighbours_speed():
     print(f"Minimum NN calculation time for n={n} is {min_time*1000:.3f}ms.\n")
     threshold = 2.5
     assert min_time < threshold, f"NN calculation for n={n} must be below {threshold*1000:.1f}ms"
+"""
