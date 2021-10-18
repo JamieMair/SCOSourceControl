@@ -34,13 +34,19 @@ def test_nearest_neighbour():
 
 
 def test_all_nearest_neighbours():
-    n = 256
-    point_cloud = generate_point_cloud(256, d=3, seed=1234)
+    n = 1024
+    point_cloud = generate_point_cloud(n, d=3, seed=1234)
 
     nearest_neighbour_indices = find_all_nearest_neighbours(point_cloud)
-    for i in range(n):
-        nearest_neighbour_idx = find_nearest_neighbour_from_point(point_cloud, i)
-        assert nearest_neighbour_idx == nearest_neighbour_indices[i], f"Failed on the index {i}. Actual: {nearest_neighbour_idx}, Calculated: {nearest_neighbour_indices[i]}"
+    
+    assert nearest_neighbour_indices is not None, "The find_all_nearest_neighbours function is not implemented properly, returned a None object."
+
+    assert nearest_neighbour_indices.dtype == np.int32 or nearest_neighbour_indices.dtype == np.int64, "You should make sure that the indices are stored as integers."
+    
+    kdtree = spatial.cKDTree(point_cloud)
+    _,nearest_index = kdtree.query(point_cloud,2)
+
+    assert np.all(nearest_neighbour_indices == nearest_index[:,1]), "The find_all_nearest_neighbours function is not implemented properly, function did not return expected result."
 
 """# Uncomment this code for the speed test.
 def test_all_nearest_neighbours_speed():
@@ -48,7 +54,7 @@ def test_all_nearest_neighbours_speed():
     repeats = 3
     point_cloud = generate_point_cloud(n, d=3, seed=1234)
     kdtree = spatial.cKDTree(point_cloud)
-    nearest_distance,nearest_index = kdtree.query(point_cloud,2)
+    _,nearest_index = kdtree.query(point_cloud,2)
     times = []
     for r in range(repeats):
         start_t = time()
