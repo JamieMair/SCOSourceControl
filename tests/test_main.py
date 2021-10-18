@@ -1,6 +1,7 @@
 from nearestneighbour import *
 import numpy as np
 from time import time
+import scipy.spatial as spatial
 
 
 def test_point_cloud_generation():
@@ -41,19 +42,20 @@ def test_all_nearest_neighbours():
         nearest_neighbour_idx = find_nearest_neighbour_from_point(point_cloud, i)
         assert nearest_neighbour_idx == nearest_neighbour_indices[i], f"Failed on the index {i}. Actual: {nearest_neighbour_idx}, Calculated: {nearest_neighbour_indices[i]}"
 
-""" Uncomment this code for the speed test.
+"""# Uncomment this code for the speed test.
 def test_all_nearest_neighbours_speed():
     n = 8096
     repeats = 3
     point_cloud = generate_point_cloud(n, d=3, seed=1234)
-
+    kdtree = spatial.cKDTree(point_cloud)
+    nearest_distance,nearest_index = kdtree.query(point_cloud,2)
     times = []
     for r in range(repeats):
         start_t = time()
         nearest_neighbour_indices = find_all_nearest_neighbours(point_cloud)
         end_t = time()
-        if nearest_neighbour_indices is None:
-            raise Exception("The find_all_nearest_neighbours function is not implemented properly, returned a None object.")
+        assert nearest_neighbour_indices is not None, "The find_all_nearest_neighbours function is not implemented properly, returned a None object."
+        assert np.all(nearest_neighbour_indices == nearest_index[:,1]), "The find_all_nearest_neighbours function is not implemented properly"
         times.append(end_t-start_t)
 
     min_time = np.min(times)
