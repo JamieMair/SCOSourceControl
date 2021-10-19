@@ -2,8 +2,11 @@
 ![Tests](https://github.com/JamieMair/SCOSourceControl/actions/workflows/python-app.yml/badge.svg)
 
 ## User
+
 University Username:
+
 Real Name:
+
 
 # Project Description
 
@@ -19,11 +22,13 @@ You should only need to modify `main.py`, and you do not need to change any of t
 ```
 
 # Getting Started Video
+
 [![Watch the video](https://img.youtube.com/vi/Lrq5c3U7FdY/maxresdefault.jpg)](https://www.youtube.com/watch?v=Lrq5c3U7FdY)
 
 # Troubleshooting
 
 Below is a video which goes over all of the issues you may see when trying to get your code to work. If you have an issue, it is most likely covered in this video.
+
 [![Watch the video](https://img.youtube.com/vi/LSNNDcguQx0/maxresdefault.jpg)](https://www.youtube.com/watch?v=LSNNDcguQx0)
 
 ## Some Frequent Issues/Questions:
