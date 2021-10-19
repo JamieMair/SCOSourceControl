@@ -1,6 +1,12 @@
 # SCOSourceControl
 ![Tests](https://github.com/JamieMair/SCOSourceControl/actions/workflows/python-app.yml/badge.svg)
 
+## User
+University Username:
+Real Name:
+
+# Project Description
+
 A project to help learn the basics of source control. The main code of the project is in python and focuses on writing functions which handle nearest neighbour calculations.
 
 The idea of this task is to practise using Git and test driven development. The code you will be implementing will be based on calculating the nearest neighbours of points in a d-dimensional space. The code you need to write for this project is minimal. There are some additional functions to implement to practise plotting in Python.
@@ -54,6 +60,7 @@ _Below are all of the tasks. If you are not sure what to do after watching the v
 10. Push this commit to the Github repository.
 11. Create a pull request to merge in your changes to the main branch. 
 12. Keep iterating on your code until all tests pass.
+13. Add your university username and real name to the top of the file in the location indicated.
 
 # Additional Tasks
 
