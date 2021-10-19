@@ -15,8 +15,32 @@ You should only need to modify `main.py`, and you do not need to change any of t
 # Getting Started Video
 [![Watch the video](https://img.youtube.com/vi/Lrq5c3U7FdY/maxresdefault.jpg)](https://www.youtube.com/watch?v=Lrq5c3U7FdY)
 
+# Troubleshooting
 
-# Tasks
+Below is a video which goes over all of the issues you may see when trying to get your code to work. If you have an issue, it is most likely covered in this video.
+[![Watch the video](https://img.youtube.com/vi/LSNNDcguQx0/maxresdefault.jpg)](https://www.youtube.com/watch?v=LSNNDcguQx0)
+
+## Some Frequent Issues/Questions:
+**1. The modules are not imported correctly**
+
+_This likely happens because the version of python in the terminal, or selected by VS code is wrong. Try opening a new terminal to begin with. Make sure you have installed all the dependencies with `pip install -r requirements.txt`. You can have multiple versions of python on your computer, it is important to make sure you are using the right one._
+
+**2. Debugging gives a numpy error when using the base anaconda environment**
+
+_If you have installed anaconda, it is likely your default python. This version has issues with debugging, which is very useful for developing. You need to create a new environment in the anaconda terminal. Detailed instructions are in the video. The command to do this is:_
+```
+conda create -n uni python==3.8
+```
+
+**3. Cannot discover tests**
+
+_This is likely due to not having installed the correct dependencies. For example, you may not have installed them to right version of python. You must select the correct python interpreter from the menu (type Ctrl+Shift+P and then start to type interpreter, and choose "Select Python Interpreter" from the drop down menu). You must make sure this version of python has the scipy, matplotlib, numpy and pytest packages installed. More detailed instructions are in the video._
+
+**4. What am I even meant to do?**
+
+_Below are all of the tasks. If you are not sure what to do after watching the videos, and you have setup VS Code correctly, you need to start by creating a new branch in Github Desktop, and then implementing the functions inside of `main.py`. There are two functions which currently have the word `pass`. Replace this word with the correct implementation until the tests pass. Make sure you do not edit any of the tests. There are some instructions on ways of developing your code at the end of the troubleshooting video._
+
+# Tasks (Make sure you read these carefully)
 
 1. Download the repository to your local machine using Github Desktop or another Git client.
 2. Read through the `main.py` file in the 'nearestneighbour' folder.
