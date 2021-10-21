@@ -51,6 +51,10 @@ _This is likely due to not having installed the correct dependencies. For exampl
 
 _Below are all of the tasks. If you are not sure what to do after watching the videos, and you have setup VS Code correctly, you need to start by creating a new branch in Github Desktop, and then implementing the functions inside of `main.py`. There are two functions which currently have the word `pass`. Replace this word with the correct implementation until the tests pass. Make sure you do not edit any of the tests. There are some instructions on ways of developing your code at the end of the troubleshooting video._
 
+**5. Debugging does not run any of your breakpoints**
+
+_If you have tried to run the code using the "Run and Debug" menu at the side of the screen, this will create a debugging profile in your settings. When you try and debug the individual unit tests, it will try and use this debugging profile, and not work the way you expect. The way to handle this is to delete the debugging settings by deleting the `launch.json` file in the `.vscode` folder. There may also be some fields in the `settings.json` folder that may need to be removed. If you restart VS Code and try to debug again, it should work._
+
 # Tasks (Make sure you read these carefully)
 
 1. Download the repository to your local machine using Github Desktop or another Git client.
